@@ -1,7 +1,16 @@
-img {
-    display: none;
-}
+@use '../custom' as *;
+@use '../components/mixins' as *;
 
-.nav-link {
-    color: white;
+.menu {
+    @include gradient;
+
+    li {
+        padding: 0 0.7rem;
+
+        a {
+            color: $white !important;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+    }
 }
